@@ -1,9 +1,9 @@
-import andrew_la.SortingAlgorithms;
+import andrewla.SortingAlgorithms;
 
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SortingTest {
 
