@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"andrew_la","c":"SortingAlgorithms","l":"intSort(int[])"},{"p":"andrew_la","c":"SortingAlgorithms","l":"SortingAlgorithms()","url":"%3Cinit%3E()"}]
+memberSearchIndex = [{"p":"andrewla","c":"SortingAlgorithms","l":"intSort(int[])"},{"p":"andrewla","c":"SortingAlgorithms","l":"SortingAlgorithms()","url":"%3Cinit%3E()"}]
