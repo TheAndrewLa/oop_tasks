@@ -1,5 +1,4 @@
 import andrewla.SortingAlgorithms;
-
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
