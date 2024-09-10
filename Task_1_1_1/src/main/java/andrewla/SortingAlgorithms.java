@@ -1,9 +1,19 @@
 package andrewla;
 
+import java.util.Arrays;
+
 /**
  * Class with sorting algorithms. There is only heapsort now.
  */
 public class SortingAlgorithms {
+
+    public static void main(String[] args) {
+        int[] array = new int[]{4, 7, 2, 1, 4, 4};
+
+        intSort(array);
+a
+        System.out.println(Arrays.toString(array));
+    }
 
     /**
      * Function which swaps two elements in the array.

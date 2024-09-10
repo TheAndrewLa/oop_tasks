@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-FILE=src/main/java/andrew_la/SortingAlgorithms.java
+FILE=src/main/java/andrewla/SortingAlgorithms.java
 
-javac $FILE
-javadoc $FILE
-java -classpath andrew_la.SortingAlgorithms
+javac -d myclasses $FILE
+javadoc -d docfiles $FILE
+java -cp myclasses andrewla.SortingAlgorithms
