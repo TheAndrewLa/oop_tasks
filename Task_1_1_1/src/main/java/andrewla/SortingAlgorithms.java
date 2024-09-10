@@ -11,7 +11,7 @@ public class SortingAlgorithms {
         int[] array = new int[]{4, 7, 2, 1, 4, 4};
 
         intSort(array);
-a
+
         System.out.println(Arrays.toString(array));
     }
 
