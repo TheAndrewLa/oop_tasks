@@ -1,10 +1,30 @@
 import andrewla.SortingAlgorithms;
+import java.util.Arrays;
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SortingTest {
+
+    // Some constants for testing random arrays
+
+    private static final int tinyArraySize = 5;
+    private static final int smallArraySize = 50;
+    private static final int mediumArraySize = 1000;
+    private static final int bigArraySize = 15000;
+    private static final int hugeArraySize = 50000;
+
+    private static final int randomArrayIterations = 5;
+
+    // Some constants for testing sorted & reverse sorted arrays
+
+    private static final int sortedArrayBound = 50;
+
+    private static final int sortedArrayBaseSize = 10;
+    private static final int sortedArraySizeMultiplier = 5;
+
+    private static final int sortedArrayIterations = 5;
 
     private static boolean isArraySorted(int[] array) {
         for (int i = 1; i < array.length; i++) {
@@ -16,18 +36,95 @@ class SortingTest {
         return true;
     }
 
-    // General test (random array)
+    private static int[] createRandomArray(int size) {
+        Random rand = new Random();
+        int[] array = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            array[i] = rand.nextInt();
+        }
+
+        return array;
+    }
+
+    private static int[] createRandomSortedArray(int size) {
+        Random rand = new Random();
+        int[] array = new int[size];
+
+        int prev = 0;
+
+        for (int i = 0; i < size; i++) {
+            int value = rand.nextInt(sortedArrayBound);
+
+            array[i] = prev + value;
+            prev = value + 1;
+        }
+
+        return array;
+    }
+
+    private static int[] createRandomRevSortedArray(int size) {
+        Random rand = new Random();
+        int[] array = new int[size];
+
+        int prev = 0;
+
+        for (int i = 0; i < size; i++) {
+            int value = rand.nextInt(sortedArrayBound);
+
+            array[size - i - 1] = prev + value;
+            prev = value + 1;
+        }
+
+        return array;
+    }
+
+    // General tests (random array with different sizes)
 
     @Test
-    void checkRandomArray() {
-        Random rand = new Random();
+    void checkTinyRandomArray() {
+        for (int i = 0; i < randomArrayIterations; i++) {
+            int[] array = createRandomArray(tinyArraySize);
 
-        for (int length = 1; length < 100; length += 10) {
-            int[] array = new int[length];
+            SortingAlgorithms.intSort(array);
+            assertTrue(isArraySorted(array));
+        }
+    }
 
-            for (int i = 0; i < length; i++) {
-                array[i] = rand.nextInt();
-            }
+    @Test
+    void checkSmallRandomArray() {
+        for (int i = 0; i < randomArrayIterations; i++) {
+            int[] array = createRandomArray(smallArraySize);
+
+            SortingAlgorithms.intSort(array);
+            assertTrue(isArraySorted(array));
+        }
+    }
+
+    @Test
+    void checkMediumRandomArray() {
+        for (int i = 0; i < randomArrayIterations; i++) {
+            int[] array = createRandomArray(mediumArraySize);
+
+            SortingAlgorithms.intSort(array);
+            assertTrue(isArraySorted(array));
+        }
+    }
+
+    @Test
+    void checkBigRandomArray() {
+        for (int i = 0; i < randomArrayIterations; i++) {
+            int[] array = createRandomArray(bigArraySize);
+
+            SortingAlgorithms.intSort(array);
+            assertTrue(isArraySorted(array));
+        }
+    }
+
+    @Test
+    void checkHugeRandomArray() {
+        for (int i = 0; i < randomArrayIterations; i++) {
+            int[] array = createRandomArray(hugeArraySize);
 
             SortingAlgorithms.intSort(array);
             assertTrue(isArraySorted(array));
@@ -35,39 +132,33 @@ class SortingTest {
     }
 
     // Some corner-cases
-    // (sorted, reverse-sorted and array with only one number (e.g. {1, 1, 1...}) )
+    // Sorted, reverse-sorted and array with only one number (e.g. {1, 1, 1...}) )
 
     @Test
     void checkSortedArray() {
-        Random rand = new Random();
+        int size = sortedArrayBaseSize;
 
-        for (int length = 1; length < 100; length += 10) {
-            int[] array = new int[length];
-            int base = rand.nextInt(100);
-
-            for (int i = 0; i < length; i++) {
-                array[i] = base * (i + 1);
-            }
+        for (int i = 0; i < sortedArrayIterations; i++) {
+            int[] array = createRandomSortedArray(size);
 
             SortingAlgorithms.intSort(array);
             assertTrue(isArraySorted(array));
+
+            size *= sortedArraySizeMultiplier;
         }
     }
 
     @Test
     void checkReverseSortedArray() {
-        Random rand = new Random();
+        int size = sortedArrayBaseSize;
 
-        for (int length = 1; length < 100; length += 10) {
-            int[] array = new int[length];
-            int base = rand.nextInt(100);
-
-            for (int i = 0; i < length; i++) {
-                array[i] = base * (length - i);
-            }
+        for (int i = 0; i < sortedArrayIterations; i++) {
+            int[] array = createRandomRevSortedArray(size);
 
             SortingAlgorithms.intSort(array);
             assertTrue(isArraySorted(array));
+
+            size *= sortedArraySizeMultiplier;
         }
     }
 
@@ -75,16 +166,10 @@ class SortingTest {
     void checkOneNumberArray() {
         Random rand = new Random();
 
-        for (int length = 1; length < 100; length += 10) {
-            int[] array = new int[length];
-            int value = rand.nextInt();
+        int[] array = new int[mediumArraySize];
+        Arrays.fill(array, rand.nextInt());
 
-            for (int i = 0; i < length; i++) {
-                array[i] = value;
-            }
-
-            SortingAlgorithms.intSort(array);
-            assertTrue(isArraySorted(array));
-        }
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
     }
 }
