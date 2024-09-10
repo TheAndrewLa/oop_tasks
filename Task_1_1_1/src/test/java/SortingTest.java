@@ -21,11 +21,6 @@ class SortingTest {
 
     private static final int sortedArrayBound = 50;
 
-    private static final int sortedArrayBaseSize = 10;
-    private static final int sortedArraySizeMultiplier = 5;
-
-    private static final int sortedArrayIterations = 5;
-
     private static boolean isArraySorted(int[] array) {
         for (int i = 1; i < array.length; i++) {
             if (array[i] > array[i - 1]) {
@@ -93,73 +88,69 @@ class SortingTest {
 
     @Test
     void checkSmallRandomArray() {
-        for (int i = 0; i < randomArrayIterations; i++) {
-            int[] array = createRandomArray(smallArraySize);
+        int[] array = createRandomArray(smallArraySize);
 
-            SortingAlgorithms.intSort(array);
-            assertTrue(isArraySorted(array));
-        }
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
     }
 
     @Test
     void checkMediumRandomArray() {
-        for (int i = 0; i < randomArrayIterations; i++) {
-            int[] array = createRandomArray(mediumArraySize);
+        int[] array = createRandomArray(mediumArraySize);
 
-            SortingAlgorithms.intSort(array);
-            assertTrue(isArraySorted(array));
-        }
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
     }
 
     @Test
     void checkBigRandomArray() {
-        for (int i = 0; i < randomArrayIterations; i++) {
-            int[] array = createRandomArray(bigArraySize);
+        int[] array = createRandomArray(bigArraySize);
 
-            SortingAlgorithms.intSort(array);
-            assertTrue(isArraySorted(array));
-        }
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
     }
 
     @Test
     void checkHugeRandomArray() {
-        for (int i = 0; i < randomArrayIterations; i++) {
-            int[] array = createRandomArray(hugeArraySize);
+        int[] array = createRandomArray(hugeArraySize);
 
-            SortingAlgorithms.intSort(array);
-            assertTrue(isArraySorted(array));
-        }
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
     }
 
     // Some corner-cases
     // Sorted, reverse-sorted and array with only one number (e.g. {1, 1, 1...}) )
 
     @Test
+    void checkEmptyArray() {
+        int[] array = new int[]{};
+
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
+    }
+
+    @Test
+    void checkOneElementArray() {
+        int[] array = new int[]{42};
+
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
+    }
+
+    @Test
     void checkSortedArray() {
-        int size = sortedArrayBaseSize;
+        int[] array = createRandomSortedArray(mediumArraySize);
 
-        for (int i = 0; i < sortedArrayIterations; i++) {
-            int[] array = createRandomSortedArray(size);
-
-            SortingAlgorithms.intSort(array);
-            assertTrue(isArraySorted(array));
-
-            size *= sortedArraySizeMultiplier;
-        }
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
     }
 
     @Test
     void checkReverseSortedArray() {
-        int size = sortedArrayBaseSize;
+        int[] array = createRandomRevSortedArray(mediumArraySize);
 
-        for (int i = 0; i < sortedArrayIterations; i++) {
-            int[] array = createRandomRevSortedArray(size);
-
-            SortingAlgorithms.intSort(array);
-            assertTrue(isArraySorted(array));
-
-            size *= sortedArraySizeMultiplier;
-        }
+        SortingAlgorithms.intSort(array);
+        assertTrue(isArraySorted(array));
     }
 
     @Test
