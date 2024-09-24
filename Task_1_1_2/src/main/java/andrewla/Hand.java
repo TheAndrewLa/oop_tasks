@@ -45,6 +45,7 @@ public class Hand {
 
     /**
      * Add card to the end of hand.
+     *
      * @param card card to be added
      */
     public void addCard(Card card) {
@@ -124,6 +125,7 @@ public class Hand {
 
     /**
      * Brings String presentation of card depending on whole hand.
+     *
      * @param card - card to be converted to string
      * @return card to be converted in string
      */

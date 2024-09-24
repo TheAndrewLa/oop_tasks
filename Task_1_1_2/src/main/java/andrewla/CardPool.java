@@ -28,6 +28,7 @@ public class CardPool {
 
     /**
      * Function takes card.
+     *
      * @param isHidden should card be hidden while taking or no
      * @return taken card
      */
@@ -43,6 +44,7 @@ public class CardPool {
 
     /**
      * USED FOR TESTING.
+     *
      * @return size of card pool
      */
     public int size() {
@@ -58,6 +60,7 @@ public class CardPool {
 
     /**
      * Add number card (e.g. 3, 7, 9).
+     *
      * @param rank rank of card
      */
     private void AddNumberCards(int rank) {
@@ -70,6 +73,7 @@ public class CardPool {
 
     /**
      * Add symbol card (Queen, Jack, King, Ace).
+     *
      * @param type Jack, Queen, King, Ace
      */
     private void AddSymbolCards(CardType type) {

@@ -20,6 +20,7 @@ public class Round {
 
     /**
      * Functions starts game loop of round.
+     *
      * @return result of round
      */
     public RoundResult play() {

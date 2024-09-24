@@ -11,6 +11,7 @@ public class Card {
 
     /**
      * Create number card.
+     *
      * @param rank rank of card (from 2 to 10)
      * @param suit suit of card
      */
@@ -23,6 +24,7 @@ public class Card {
 
     /**
      * Create symbol card.
+     *
      * @param type type of card (Jack, Queen, King, Ace)
      * @param suit suit of card
      */
