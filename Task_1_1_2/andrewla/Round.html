@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10};
+var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -155,7 +155,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#index">index</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#Index">Index</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -177,10 +177,24 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dealersTurn()">dealersTurn</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Helping function which emulates dealers loop.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="RoundResult.html" title="enum in andrewla">RoundResult</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#play()">play</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Functions starts game loop of round.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playersTurn()">playersTurn</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Helping function which emulates players turn.</div>
 </td>
 </tr>
 </table>
@@ -207,13 +221,13 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
-<a id="index">
+<a id="Index">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>index</h4>
-<pre>public static&nbsp;int index</pre>
+<h4>Index</h4>
+<pre>public static&nbsp;int Index</pre>
 </li>
 </ul>
 </li>
@@ -229,7 +243,7 @@ extends java.lang.Object</pre>
 <a id="play()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>play</h4>
 <pre class="methodSignature">public&nbsp;<a href="RoundResult.html" title="enum in andrewla">RoundResult</a>&nbsp;play()</pre>
@@ -238,6 +252,26 @@ extends java.lang.Object</pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>result of round</dd>
 </dl>
+</li>
+</ul>
+<a id="playersTurn()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>playersTurn</h4>
+<pre class="methodSignature">protected&nbsp;void&nbsp;playersTurn()</pre>
+<div class="block">Helping function which emulates players turn. <br> Used in game loop.</div>
+</li>
+</ul>
+<a id="dealersTurn()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dealersTurn</h4>
+<pre class="methodSignature">protected&nbsp;void&nbsp;dealersTurn()</pre>
+<div class="block">Helping function which emulates dealers loop. <br> Used in game loop.</div>
 </li>
 </ul>
 </li>
