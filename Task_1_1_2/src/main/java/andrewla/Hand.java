@@ -68,22 +68,19 @@ public class Hand {
 
         for (Card i : cards) {
             switch (i.getType()) {
-                case Number: {
+                case Number:
                     value += i.getRank();
-                }
-                break;
+                    break;
 
                 case Jack:
                 case Queen:
-                case King: {
+                case King:
                     value += 10;
-                }
-                break;
+                    break;
 
-                case Ace: {
+                case Ace:
                     aces += 1;
-                }
-                break;
+                    break;
             }
         }
 
@@ -137,22 +134,19 @@ public class Hand {
             sb.append('(');
 
             switch (card.getType()) {
-                case Number: {
+                case Number:
                     sb.append(card.getRank());
-                }
-                break;
+                    break;
 
                 case Jack:
                 case Queen:
-                case King: {
+                case King:
                     sb.append("10");
-                }
-                break;
+                    break;
 
-                case Ace: {
+                case Ace:
                     sb.append(valueOfAce);
-                }
-                break;
+                    break;
             }
 
             sb.append(')');

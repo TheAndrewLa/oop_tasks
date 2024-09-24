@@ -15,13 +15,13 @@ public class CardPool {
         cards = new ArrayList<>();
 
         for (int i = 2; i <= 10; i++) {
-            AddNumberCards(i);
+            addNumberCards(i);
         }
 
-        AddSymbolCards(CardType.Jack);
-        AddSymbolCards(CardType.Queen);
-        AddSymbolCards(CardType.King);
-        AddSymbolCards(CardType.Ace);
+        addSymbolCards(CardType.Jack);
+        addSymbolCards(CardType.Queen);
+        addSymbolCards(CardType.King);
+        addSymbolCards(CardType.Ace);
 
         Collections.shuffle(cards);
     }
@@ -52,6 +52,7 @@ public class CardPool {
     }
 
     /**
+     *
      * @return boolean that indicates pool is empty or not
      */
     public boolean isEmpty() {
@@ -63,7 +64,7 @@ public class CardPool {
      *
      * @param rank rank of card
      */
-    private void AddNumberCards(int rank) {
+    private void addNumberCards(int rank) {
         assert rank >= 2 && rank <= 10;
 
         for (CardSuit suit : CardSuit.values()) {
@@ -76,7 +77,7 @@ public class CardPool {
      *
      * @param type Jack, Queen, King, Ace
      */
-    private void AddSymbolCards(CardType type) {
+    private void addSymbolCards(CardType type) {
         assert type != CardType.Number;
 
         for (CardSuit suit : CardSuit.values()) {

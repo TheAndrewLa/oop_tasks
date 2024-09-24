@@ -79,9 +79,7 @@ public class Card {
             return "<скрытая карта>";
         }
 
-        String name = (rank == null)
-            ? typeNames.get(type)
-            : numberNames.get(rank);
+        String name = (rank == null) ? typeNames.get(type) : numberNames.get(rank);
 
         name += ' ';
         name += suitNames.get(suit);

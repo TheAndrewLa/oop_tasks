@@ -9,9 +9,9 @@ public class Round {
      * Default constructor of round class.
      */
     Round() {
-        index++;
+        Index++;
 
-        System.out.printf("Раунд %d%n", index);
+        System.out.printf("Раунд %d%n", Index);
 
         dealersHand = new Hand();
         playersHand = new Hand();
@@ -37,14 +37,14 @@ public class Round {
 
         // Dealer hand can not be calculated at this time (because one card is hidden)
 
-        if (playersHand.getValue() == 21) {
+        if (playersHand.getValue() == PointsTarget) {
             System.out.println("Вы выиграли раунд!\n");
             return RoundResult.PlayerWins;
         }
 
         playersTurn();
 
-        if (playersHand.getValue() > 21) {
+        if (playersHand.getValue() > PointsTarget) {
             System.out.println("Дилер выиграл раунд!\n");
             return RoundResult.DealerWins;
         } else if (playersHand.getValue() == 21) {
@@ -54,7 +54,7 @@ public class Round {
 
         dealersTurn();
 
-        if (dealersHand.getValue() > 21) {
+        if (dealersHand.getValue() > PointsTarget) {
             System.out.println("Вы выиграли раунд!\n");
             return RoundResult.PlayerWins;
         }
@@ -74,11 +74,11 @@ public class Round {
     /**
      * Helping function which emulates players turn. <br> Used in game loop.
      */
-    private void playersTurn() {
+    protected void playersTurn() {
         System.out.println("Ваш ход");
         System.out.println("---------------");
 
-        while (playersHand.getValue() < 21 && !pool.isEmpty()
+        while (playersHand.getValue() < PointsTarget && !pool.isEmpty()
             && InputHandler.askUser("Хотите карту?")) {
             Card card = pool.takeCard(false);
 
@@ -93,7 +93,7 @@ public class Round {
     /**
      * Helping function which emulates dealers loop. <br> Used in game loop.
      */
-    private void dealersTurn() {
+    protected void dealersTurn() {
         System.out.println("Ход дилера");
         System.out.println("---------------");
 
@@ -105,7 +105,7 @@ public class Round {
         System.out.printf("Диллер открывает закрытую карту «%s»%n", dealerCard);
         printHands();
 
-        while (dealersHand.getValue() < 17 && !pool.isEmpty()) {
+        while (dealersHand.getValue() < DealerPointsLimit && !pool.isEmpty()) {
             Card card = pool.takeCard(false);
             dealersHand.addCard(card);
 
@@ -128,5 +128,8 @@ public class Round {
 
     private final CardPool pool;
 
-    public static int index = 0;
+    private static final int PointsTarget = 21;
+    private static final int DealerPointsLimit = 17;
+
+    public static int Index = 0;
 }

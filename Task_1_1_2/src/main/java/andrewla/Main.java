@@ -32,7 +32,7 @@ public class Main {
 
             System.out.println();
 
-            System.out.printf("Счет после %d-го раунда:%n", Round.index);
+            System.out.printf("Счет после %d-го раунда:%n", Round.Index);
             System.out.printf("Вы: %d%n", playersScore);
             System.out.printf("Дилер: %d%n", dealersScore);
 
