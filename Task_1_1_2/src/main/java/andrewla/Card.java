@@ -35,6 +35,7 @@ public class Card {
     }
 
     /**
+     *
      * @return rank of card
      */
     public int getRank() {
@@ -60,6 +61,7 @@ public class Card {
     }
 
     /**
+     *
      * @return boolean value indicates hided card or no
      */
     public boolean isHidden() {
@@ -67,6 +69,7 @@ public class Card {
     }
 
     /**
+     *
      * @return type of card
      */
     public CardType getType() {
