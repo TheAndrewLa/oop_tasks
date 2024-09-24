@@ -121,6 +121,10 @@ public class Card {
     private static final HashMap<CardType, String> typeNames = createTypeMap();
     private static final HashMap<CardSuit, String> suitNames = createSuitMap();
 
+    /**
+     * Helping function which creates map of number of cards
+     * @return map of cards number
+     */
     private static HashMap<Integer, String> createNumberMap() {
         HashMap<Integer, String> map = new HashMap<>();
         map.put(2, "Двойка");
@@ -136,6 +140,10 @@ public class Card {
         return map;
     }
 
+    /**
+     * Helping function which creates map of type of cards
+     * @return map of cards type
+     */
     private static HashMap<CardType, String> createTypeMap() {
         HashMap<CardType, String> map = new HashMap<>();
         map.put(CardType.Jack, "Валет");
@@ -146,6 +154,10 @@ public class Card {
         return map;
     }
 
+    /**
+     * Helping function which creates map of suit of cards
+     * @return map of cards suit
+     */
     private static HashMap<CardSuit, String> createSuitMap() {
         HashMap<CardSuit, String> map = new HashMap<>();
         map.put(CardSuit.Hearts, "Червы");
