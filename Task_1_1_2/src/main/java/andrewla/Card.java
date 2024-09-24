@@ -35,8 +35,9 @@ public class Card {
     }
 
     /**
+     * Returns rank of cars.
      *
-     * @return rank of card
+     * @return rank
      */
     public int getRank() {
         if (rank == null) {
@@ -61,14 +62,16 @@ public class Card {
     }
 
     /**
+     * Returns boolean which indicates hided card or no.
      *
-     * @return boolean value indicates hided card or no
+     * @return boolean indicator
      */
     public boolean isHidden() {
         return isHidden;
     }
 
     /**
+     * Returns a type of card
      *
      * @return type of card
      */
@@ -114,29 +117,42 @@ public class Card {
 
     private boolean isHidden = false;
 
-    private static final HashMap<Integer, String> numberNames = new HashMap<>() {{
-        put(2, "Двойка");
-        put(3, "Тройка");
-        put(4, "Четверка");
-        put(5, "Пятерка");
-        put(6, "Шестерка");
-        put(7, "Семерка");
-        put(8, "Восьмерка");
-        put(9, "Девятка");
-        put(10, "Десятка");
-    }};
+    private static final HashMap<Integer, String> numberNames = createNumberMap();
+    private static final HashMap<CardType, String> typeNames = createTypeMap();
+    private static final HashMap<CardSuit, String> suitNames = createSuitMap();
 
-    private static final HashMap<CardType, String> typeNames = new HashMap<>() {{
-        put(CardType.Jack, "Валет");
-        put(CardType.Queen, "Дама");
-        put(CardType.King, "Король");
-        put(CardType.Ace, "Туз");
-    }};
+    private static HashMap<Integer, String> createNumberMap() {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(2, "Двойка");
+        map.put(3, "Тройка");
+        map.put(4, "Четверка");
+        map.put(5, "Пятерка");
+        map.put(6, "Шестерка");
+        map.put(7, "Семерка");
+        map.put(8, "Восьмерка");
+        map.put(9, "Девятка");
+        map.put(10, "Десятка");
 
-    private static final HashMap<CardSuit, String> suitNames = new HashMap<>() {{
-        put(CardSuit.Hearts, "Червы");
-        put(CardSuit.Diamonds, "Бубы");
-        put(CardSuit.Clubs, "Трефы");
-        put(CardSuit.Spades, "Пики");
-    }};
+        return map;
+    }
+
+    private static HashMap<CardType, String> createTypeMap() {
+        HashMap<CardType, String> map = new HashMap<>();
+        map.put(CardType.Jack, "Валет");
+        map.put(CardType.Queen, "Дама");
+        map.put(CardType.King, "Король");
+        map.put(CardType.Ace, "Туз");
+
+        return map;
+    }
+
+    private static HashMap<CardSuit, String> createSuitMap() {
+        HashMap<CardSuit, String> map = new HashMap<>();
+        map.put(CardSuit.Hearts, "Червы");
+        map.put(CardSuit.Diamonds, "Бубы");
+        map.put(CardSuit.Clubs, "Трефы");
+        map.put(CardSuit.Spades, "Пики");
+
+        return map;
+    }
 }
