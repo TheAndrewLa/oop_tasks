@@ -4,10 +4,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Test class which provides testing of Hands logic.
+ * toString method in different situations.
+ * Value of hand in different situations.
+ */
 public class HandTest {
 
     @Test
-    public void ToString() {
+    public void string() {
         Hand hand = new Hand();
         hand.addCard(new Card(CardType.Queen, CardSuit.Spades));
         hand.addCard(new Card(3, CardSuit.Hearts));
@@ -19,7 +24,7 @@ public class HandTest {
     }
 
     @Test
-    public void ToStringWithHidden() {
+    public void stringWithHidden() {
         Hand hand = new Hand();
         hand.addCard(new Card(CardType.Ace, CardSuit.Clubs));
         hand.addCard(new Card(7, CardSuit.Diamonds));
@@ -32,7 +37,7 @@ public class HandTest {
     }
 
     @Test
-    public void Value() {
+    public void value() {
         Hand hand = new Hand();
         hand.addCard(new Card(CardType.Ace, CardSuit.Hearts));
         hand.addCard(new Card(CardType.Ace, CardSuit.Diamonds));
@@ -42,7 +47,7 @@ public class HandTest {
     }
 
     @Test
-    public void ValueWithHidden() {
+    public void valueWithHidden() {
         Hand hand = new Hand();
         CardPool pool = new CardPool();
 

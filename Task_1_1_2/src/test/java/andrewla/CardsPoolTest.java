@@ -7,15 +7,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * Test class which provides testing of CardPools logic.
+ * Size of pool.
+ * Uniqueness of cards in pool.
+ */
 public class CardsPoolTest {
 
     @Test
-    public void Size() {
+    public void size() {
         assertEquals(52, (new CardPool()).size());
     }
 
     @Test
-    public void Uniqueness() {
+    public void uniqueness() {
         CardPool pool = new CardPool();
         HashSet<Card> cards = new HashSet<>();
 

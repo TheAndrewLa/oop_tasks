@@ -5,10 +5,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * Test class which provides testing of Cards logic.
+ * Constructor with an error.
+ * toString methods in different situations.
+ * Rank of card in different situations.
+ */
 public class CardsTest {
 
     @Test
-    public void Constructor() {
+    public void constructor() {
         try {
             new Card(-100, CardSuit.Hearts);
             assertTrue(false);
@@ -18,7 +24,7 @@ public class CardsTest {
     }
 
     @Test
-    public void ToString() {
+    public void string() {
         String str = (new Card(5, CardSuit.Hearts)).toString();
         assertEquals("Пятерка Червы", str);
 
@@ -33,7 +39,7 @@ public class CardsTest {
     }
 
     @Test
-    public void ToStringHiddenCard() {
+    public void stringHiddenCard() {
         Card card = new Card(CardType.Ace, CardSuit.Clubs);
         card.hide();
 
@@ -41,7 +47,7 @@ public class CardsTest {
     }
 
     @Test
-    public void Ranks() {
+    public void ranks() {
         int rank = (new Card(CardType.Ace, CardSuit.Diamonds)).getRank();
         assertEquals(0, rank);
 
