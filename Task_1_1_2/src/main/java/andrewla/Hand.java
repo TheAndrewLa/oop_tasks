@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Class which presents hand. <br>
- * Provide functions to print hand & calculate value of hand.
+ * Provide functions to print hand and calculate value of hand.
  */
 public class Hand {
 
