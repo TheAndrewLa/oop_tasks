@@ -3,8 +3,7 @@ package andrewla;
 import java.util.ArrayList;
 
 /**
- * Class which presents hand. <br>
- * Provide functions to print hand and calculate value of hand.
+ * Class which presents hand. <br> Provide functions to print hand and calculate value of hand.
  */
 public class Hand {
 
@@ -163,8 +162,8 @@ public class Hand {
     }
 
     /**
-     * Determine can value of cards in hand be calculated. <br>
-     * if there are hidden cards - no (false), otherwise - yes (true).
+     * Determine can value of cards in hand be calculated. <br> if there are hidden cards - no
+     * (false), otherwise - yes (true).
      */
     private boolean canCalculate() {
         if (cards.isEmpty()) {

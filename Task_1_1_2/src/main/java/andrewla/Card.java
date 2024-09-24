@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 /**
- * Class which store all info about cards. <br>
- * This class can present all 54 cards.
+ * Class which store all info about cards. <br> This class can present all 54 cards.
  */
 public class Card {
 
@@ -114,7 +113,7 @@ public class Card {
 
     private boolean isHidden = false;
 
-    private static final HashMap<Integer, String> numberNames = new HashMap<>(){{
+    private static final HashMap<Integer, String> numberNames = new HashMap<>() {{
         put(2, "Двойка");
         put(3, "Тройка");
         put(4, "Четверка");
@@ -126,14 +125,14 @@ public class Card {
         put(10, "Десятка");
     }};
 
-    private static final HashMap<CardType, String> typeNames = new HashMap<>(){{
+    private static final HashMap<CardType, String> typeNames = new HashMap<>() {{
         put(CardType.Jack, "Валет");
         put(CardType.Queen, "Дама");
         put(CardType.King, "Король");
         put(CardType.Ace, "Туз");
     }};
 
-    private static final HashMap<CardSuit, String> suitNames = new HashMap<>(){{
+    private static final HashMap<CardSuit, String> suitNames = new HashMap<>() {{
         put(CardSuit.Hearts, "Червы");
         put(CardSuit.Diamonds, "Бубы");
         put(CardSuit.Clubs, "Трефы");

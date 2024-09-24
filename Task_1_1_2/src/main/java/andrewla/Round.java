@@ -72,8 +72,7 @@ public class Round {
     }
 
     /**
-     * Helping function which emulates players turn. <br>
-     * Used in game loop.
+     * Helping function which emulates players turn. <br> Used in game loop.
      */
     private void playersTurn() {
         System.out.println("Ваш ход");
@@ -92,8 +91,7 @@ public class Round {
     }
 
     /**
-     * Helping function which emulates dealers loop. <br>
-     * Used in game loop.
+     * Helping function which emulates dealers loop. <br> Used in game loop.
      */
     private void dealersTurn() {
         System.out.println("Ход дилера");
