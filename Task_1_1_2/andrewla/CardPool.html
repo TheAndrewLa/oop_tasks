@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10};
+var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -132,6 +132,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">CardPool</span>
 extends java.lang.Object</pre>
+<div class="block">A card pool class Shuffle and store all 54 cards</div>
 </li>
 </ul>
 </div>
@@ -153,7 +154,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">CardPool</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Default constructor for CardPool</div>
+</td>
 </tr>
 </table>
 </li>
@@ -179,9 +182,18 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#size()">size</a></span>()</code></th>
+<td class="colLast">
+<div class="block">USED FOR TESTING</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="Card.html" title="class in andrewla">Card</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#popCard()">popCard</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#takeCard(boolean)">takeCard</a></span>&#8203;(boolean&nbsp;isHidden)</code></th>
+<td class="colLast">
+<div class="block">Function takes card</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -214,6 +226,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>CardPool</h4>
 <pre>public&nbsp;CardPool()</pre>
+<div class="block">Default constructor for CardPool</div>
 </li>
 </ul>
 </li>
@@ -226,13 +239,34 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="popCard()">
+<a id="takeCard(boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>popCard</h4>
-<pre class="methodSignature">public&nbsp;<a href="Card.html" title="class in andrewla">Card</a>&nbsp;popCard()</pre>
+<h4>takeCard</h4>
+<pre class="methodSignature">public&nbsp;<a href="Card.html" title="class in andrewla">Card</a>&nbsp;takeCard&#8203;(boolean&nbsp;isHidden)</pre>
+<div class="block">Function takes card</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>isHidden</code> - should card be hidden while taking or no</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>taken card</dd>
+</dl>
+</li>
+</ul>
+<a id="size()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>size</h4>
+<pre class="methodSignature">public&nbsp;int&nbsp;size()</pre>
+<div class="block">USED FOR TESTING</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>size of card pool</dd>
+</dl>
 </li>
 </ul>
 <a id="isEmpty()">
@@ -242,6 +276,10 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>isEmpty</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isEmpty()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>boolean that indicates pool is empty or not</dd>
+</dl>
 </li>
 </ul>
 </li>

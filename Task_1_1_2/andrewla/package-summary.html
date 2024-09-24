@@ -106,15 +106,36 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tbody>
 <tr class="altColor">
 <th class="colFirst" scope="row"><a href="Card.html" title="class in andrewla">Card</a></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Class which store all info about cards
+ This class can present all 54 cards</div>
+</td>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><a href="CardPool.html" title="class in andrewla">CardPool</a></th>
+<td class="colLast">
+<div class="block">A card pool class Shuffle and store all 54 cards</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="Hand.html" title="class in andrewla">Hand</a></th>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="InputHandler.html" title="class in andrewla">InputHandler</a></th>
+<td class="colLast">
+<div class="block">Class which provides IO stuff via static functions</div>
+</td>
 </tr>
 <tr class="altColor">
 <th class="colFirst" scope="row"><a href="Main.html" title="class in andrewla">Main</a></th>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="Round.html" title="class in andrewla">Round</a></th>
+<td class="colLast">
+<div class="block">Class which provide function for round stage for game loop</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -129,11 +150,23 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tbody>
 <tr class="altColor">
 <th class="colFirst" scope="row"><a href="CardSuit.html" title="enum in andrewla">CardSuit</a></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">An enum with card suit
+ There are traditional french names of cards</div>
+</td>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><a href="CardType.html" title="enum in andrewla">CardType</a></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">An enum with types of cards</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="RoundResult.html" title="enum in andrewla">RoundResult</a></th>
+<td class="colLast">
+<div class="block">An enum with results of round <br>
+ Used in game loop in Main.java to dispatch result</div>
+</td>
 </tr>
 </tbody>
 </table>

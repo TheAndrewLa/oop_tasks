@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"andrewla","l":"Card"},{"p":"andrewla","l":"CardPool"},{"p":"andrewla","l":"CardSuit"},{"p":"andrewla","l":"CardType"},{"p":"andrewla","l":"Main"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"andrewla","l":"Card"},{"p":"andrewla","l":"CardPool"},{"p":"andrewla","l":"CardSuit"},{"p":"andrewla","l":"CardType"},{"p":"andrewla","l":"Hand"},{"p":"andrewla","l":"InputHandler"},{"p":"andrewla","l":"Main"},{"p":"andrewla","l":"Round"},{"p":"andrewla","l":"RoundResult"}]
