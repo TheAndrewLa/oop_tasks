@@ -1,8 +1,8 @@
 package andrewla;
 
 /**
- * An enum with card suit
- * There are traditional french names of cards
+ * An enum with card suit. <br>
+ * There are traditional french names of cards.
  */
 public enum CardSuit {
     Hearts,

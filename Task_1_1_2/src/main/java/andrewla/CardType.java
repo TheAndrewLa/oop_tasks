@@ -1,7 +1,7 @@
 package andrewla;
 
 /**
- * An enum with types of cards
+ * An enum with types of cards.
  */
 public enum CardType {
     Number,

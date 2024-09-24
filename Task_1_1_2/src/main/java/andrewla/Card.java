@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Objects;
 
 /**
- * Class which store all info about cards
- * This class can present all 54 cards
+ * Class which store all info about cards. <br>
+ * This class can present all 54 cards.
  */
 public class Card {
 
     /**
-     * Create number card
+     * Create number card.
      * @param rank rank of card (from 2 to 10)
      * @param suit suit of card
      */
@@ -22,7 +22,7 @@ public class Card {
     }
 
     /**
-     * Create symbol card
+     * Create symbol card.
      * @param type type of card (Jack, Queen, King, Ace)
      * @param suit suit of card
      */
@@ -45,14 +45,14 @@ public class Card {
     }
 
     /**
-     * Hides a card (needed for displaying)
+     * Hides a card (needed for displaying).
      */
     public void hide() {
         isHidden = true;
     }
 
     /**
-     * Shows a card (needed for displaying)
+     * Shows a card (needed for displaying).
      */
     public void show() {
         isHidden = false;

@@ -1,12 +1,12 @@
 package andrewla;
 
 /**
- * Class which provide function for round stage for game loop
+ * Class which provide function for round stage for game loop.
  */
 public class Round {
 
     /**
-     * Default constructor of round class
+     * Default constructor of round class.
      */
     Round() {
         index++;
@@ -19,7 +19,7 @@ public class Round {
     }
 
     /**
-     * Functions starts game loop of round
+     * Functions starts game loop of round.
      * @return result of round
      */
     public RoundResult play() {
@@ -71,8 +71,8 @@ public class Round {
     }
 
     /**
-     * Helping function which emulates players turn
-     * Used in game loop
+     * Helping function which emulates players turn. <br>
+     * Used in game loop.
      */
     private void playersTurn() {
         System.out.println("Ваш ход");
@@ -91,8 +91,8 @@ public class Round {
     }
 
     /**
-     * Helping function which emulates dealers loop
-     * Used in game loop
+     * Helping function which emulates dealers loop. <br>
+     * Used in game loop.
      */
     private void dealersTurn() {
         System.out.println("Ход дилера");
@@ -117,7 +117,7 @@ public class Round {
     }
 
     /**
-     * Helping function which prints current decks state (players & dealers)
+     * Helping function which prints current decks state (players & dealers).
      */
     private void printHands() {
         System.out.printf("\tВаши карты: %s%n", playersHand);

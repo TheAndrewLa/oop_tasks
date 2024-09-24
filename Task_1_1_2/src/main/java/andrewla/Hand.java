@@ -2,10 +2,14 @@ package andrewla;
 
 import java.util.ArrayList;
 
+/**
+ * Class which presents hand. <br>
+ * Provide functions to print hand & calculate value of hand.
+ */
 public class Hand {
 
     /**
-     * Default constructor for class 'Hand'
+     * Default constructor for class 'Hand'.
      */
     Hand() {
         cards = new ArrayList<>();
@@ -40,7 +44,7 @@ public class Hand {
     }
 
     /**
-     * Add card to the end of hand
+     * Add card to the end of hand.
      * @param card card to be added
      */
     public void addCard(Card card) {
@@ -49,7 +53,7 @@ public class Hand {
     }
 
     /**
-     * Calculates total value of cards in hand
+     * Calculates total value of cards in hand.
      */
     public void calculateValue() {
         if (!canCalculate()) {
@@ -119,7 +123,7 @@ public class Hand {
     }
 
     /**
-     * Brings String presentation of card depending on whole hand
+     * Brings String presentation of card depending on whole hand.
      * @param card - card to be converted to string
      * @return card to be converted in string
      */
@@ -157,8 +161,8 @@ public class Hand {
     }
 
     /**
-     * Determine can value of cards in hand be calculated <br>
-     * if there are hidden cards - no (false), otherwise - yes (true)
+     * Determine can value of cards in hand be calculated. <br>
+     * if there are hidden cards - no (false), otherwise - yes (true).
      */
     private boolean canCalculate() {
         if (cards.isEmpty()) {

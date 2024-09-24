@@ -2,15 +2,14 @@ package andrewla;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Objects;
 
 /**
- * A card pool class Shuffle and store all 54 cards
+ * A card pool class Shuffle and store all 54 cards.
  */
 public class CardPool {
 
     /**
-     * Default constructor for CardPool
+     * Default constructor for CardPool.
      */
     public CardPool() {
         cards = new ArrayList<>();
@@ -28,8 +27,7 @@ public class CardPool {
     }
 
     /**
-     * Function takes card
-     *
+     * Function takes card.
      * @param isHidden should card be hidden while taking or no
      * @return taken card
      */
@@ -44,7 +42,7 @@ public class CardPool {
     }
 
     /**
-     * USED FOR TESTING
+     * USED FOR TESTING.
      * @return size of card pool
      */
     public int size() {
@@ -59,8 +57,7 @@ public class CardPool {
     }
 
     /**
-     * Add number card (2..10)
-     *
+     * Add number card (e.g. 3, 7, 9).
      * @param rank rank of card
      */
     private void AddNumberCards(int rank) {
@@ -72,8 +69,7 @@ public class CardPool {
     }
 
     /**
-     * Add symbol card (Queen, Jack, King, Ace)
-     *
+     * Add symbol card (Queen, Jack, King, Ace).
      * @param type Jack, Queen, King, Ace
      */
     private void AddSymbolCards(CardType type) {
