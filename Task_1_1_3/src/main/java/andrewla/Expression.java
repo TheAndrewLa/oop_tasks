@@ -10,14 +10,14 @@ import java.util.Scanner;
 public abstract class Expression {
 
     /**
-     * Printing expression
+     * Printing expression.
      *
      * @param stream a stream where print occurs
      */
     abstract void print(PrintStream stream);
 
     /**
-     * Differentiate an expression and returns derivative
+     * Differentiate an expression and returns derivative.
      * Variable name should satisfy this regexp {@code [a-z]+}
      *
      * @param variable an identifier of variable of differentiation

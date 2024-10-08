@@ -8,7 +8,7 @@ import java.io.PrintStream;
 public class Number extends Expression {
 
     /**
-     * Constructs a number expression by given value
+     * Constructs a number expression by given value.
      *
      * @param value a value
      */
