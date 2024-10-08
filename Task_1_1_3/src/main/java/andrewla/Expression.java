@@ -15,16 +15,17 @@ public abstract class Expression {
 
     /**
      * Differentiate an expression and returns derivative
-     * TODO: convention of variable name
+     * Variable name should satisfy this regexp {@code [a-z]+}
      *
      * @param variable an identifier of variable of differentiation
-     * @return a expression which is derivative
+     * @return an expression which is derivative
      */
     abstract Expression derivative(String variable);
 
     /**
-     * Evaluates expression by variable-value map
-     * TODO: convention of value map
+     * Evaluates expression by variable-value map.
+     * Value map is being set in this pattern:
+     * "var1=val1;var2=val2;..."
      *
      * @param values a string contains values of variables
      * @return a result of evaluation
@@ -32,9 +33,10 @@ public abstract class Expression {
     abstract int eval(String values);
 
     /**
-     * TODO: convention of value map
+     * Value map is being set in this pattern:
+     * "var1=val1;var2=val2;..."
      *
-     * @param values a string with variable signification
+     * @param values a string with value map
      * @return a hashmap with variable names as key and variable value as value
      */
     protected static HashMap<String, Integer> getValueMap(String values) {
@@ -52,12 +54,14 @@ public abstract class Expression {
             int i = 0;
             while (record.charAt(i) != '=') {
                 name.append(record.charAt(i));
+                i++;
             }
 
             i++;
 
             while (i < record.length()) {
                 value.append(record.charAt(i));
+                i++;
             }
 
             map.put(name.toString(), Integer.valueOf(value.toString()));

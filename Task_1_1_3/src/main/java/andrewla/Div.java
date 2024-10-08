@@ -2,6 +2,12 @@ package andrewla;
 
 public class Div extends BinaryExpression {
 
+    /**
+     * Constructs {@code divide} expression by left and right expressions.
+     *
+     * @param left a left expression
+     * @param right a right expression
+     */
     public Div(Expression left, Expression right) {
         super(left, right, '/');
     }

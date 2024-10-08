@@ -2,6 +2,12 @@ package andrewla;
 
 public class Sub extends BinaryExpression {
 
+    /**
+     * Constructs {@code subtract} expression by left and right expressions.
+     *
+     * @param left a left expression
+     * @param right a right expression
+     */
     public Sub(Expression left, Expression right) {
         super(left, right, '-');
     }

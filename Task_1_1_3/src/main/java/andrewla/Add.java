@@ -2,6 +2,12 @@ package andrewla;
 
 public class Add extends BinaryExpression {
 
+    /**
+     * Constructs {@code add} expression by left and right expressions.
+     *
+     * @param left a left expression
+     * @param right a right expression
+     */
     public Add(Expression left, Expression right) {
         super(left, right, '+');
     }

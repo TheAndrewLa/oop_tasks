@@ -2,6 +2,12 @@ package andrewla;
 
 public class Mul extends BinaryExpression {
 
+    /**
+     * Constructs {@code multiply} expression by left and right expressions.
+     *
+     * @param left a left expression
+     * @param right a right expression
+     */
     public Mul(Expression left, Expression right) {
         super(left, right, '*');
     }
