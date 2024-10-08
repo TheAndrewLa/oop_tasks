@@ -4,6 +4,9 @@ import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Abstract expression class.
+ */
 public abstract class Expression {
 
     /**

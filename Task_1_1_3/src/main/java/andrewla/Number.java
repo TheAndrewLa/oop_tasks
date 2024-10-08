@@ -2,6 +2,9 @@ package andrewla;
 
 import java.io.PrintStream;
 
+/**
+ * Single number expression.
+ */
 public class Number extends Expression {
 
     /**

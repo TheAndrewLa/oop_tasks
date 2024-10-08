@@ -1,5 +1,8 @@
 package andrewla;
 
+/**
+ * Division expression class.
+ */
 public class Div extends BinaryExpression {
 
     /**

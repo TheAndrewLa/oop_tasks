@@ -1,5 +1,8 @@
 package andrewla;
 
+/**
+ * Multiply expression class.
+ */
 public class Mul extends BinaryExpression {
 
     /**

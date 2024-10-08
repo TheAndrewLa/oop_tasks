@@ -1,5 +1,8 @@
 package andrewla;
 
+/**
+ * Add expression class.
+ */
 public class Add extends BinaryExpression {
 
     /**

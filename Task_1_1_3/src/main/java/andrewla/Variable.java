@@ -3,6 +3,9 @@ package andrewla;
 import java.io.PrintStream;
 import java.util.HashMap;
 
+/**
+ * Single variable expression class.
+ */
 public class Variable extends Expression {
 
     /**

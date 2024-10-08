@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Class which performs test of behaviour of {@code Sub} class.
+ */
 public class SubTest {
 
     @Test

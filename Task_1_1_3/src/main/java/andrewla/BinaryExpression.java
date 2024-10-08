@@ -2,6 +2,9 @@ package andrewla;
 
 import java.io.PrintStream;
 
+/**
+ * Abstract binary expression class.
+ */
 public abstract class BinaryExpression extends Expression {
 
     /**

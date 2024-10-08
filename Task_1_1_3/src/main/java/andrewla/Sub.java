@@ -1,5 +1,8 @@
 package andrewla;
 
+/**
+ * Subtraction expression class.
+ */
 public class Sub extends BinaryExpression {
 
     /**
