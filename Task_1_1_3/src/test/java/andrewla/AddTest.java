@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Class which performs test of behaviour of {@code Add} class.
+ */
 public class AddTest {
 
     @Test
@@ -44,18 +47,16 @@ public class AddTest {
     @Test
     void derivativeTest() {
         Add add = new Add(new Variable("x"), new Number(100));
-        Expression exp1 = add.derivative("x");
-        Expression exp2 = add.derivative("y");
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PrintStream stream = new PrintStream(out);
 
-        exp1.print(stream);
+        add.derivative("x").print(stream);
         assertEquals("(1+0)", out.toString());
 
         out.reset();
 
-        exp2.print(stream);
+        add.derivative("y").print(stream);
         assertEquals("(0+0)", out.toString());
     }
 }

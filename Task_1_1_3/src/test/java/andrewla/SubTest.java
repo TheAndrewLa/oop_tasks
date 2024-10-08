@@ -45,18 +45,16 @@ public class SubTest {
     @Test
     void derivativeTest() {
         Sub sub = new Sub(new Variable("x"), new Number(100));
-        Expression exp1 = sub.derivative("x");
-        Expression exp2 = sub.derivative("y");
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PrintStream stream = new PrintStream(out);
 
-        exp1.print(stream);
+        sub.derivative("x").print(stream);
         assertEquals("(1-0)", out.toString());
 
         out.reset();
 
-        exp2.print(stream);
+        sub.derivative("y").print(stream);
         assertEquals("(0-0)", out.toString());
     }
 }
