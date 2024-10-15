@@ -1,18 +1,18 @@
 package andrewla;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
- * A class which performs testing of adjacency matrix graph: {@code GraphAM} class.
+ * A class which performs testing of adjacency list graph: {@code GraphAL}.
  */
-public class TestGraphAM {
+public class TestGraphAdjList {
+
     @Test
     void addVertex() {
-        Graph graph = new GraphAM();
+        GraphAL graph = new GraphAL();
 
         for (int i = 0; i < 100; i++) {
             graph.addVertex();
@@ -23,13 +23,13 @@ public class TestGraphAM {
 
     @Test
     void removeVertex() {
-        Graph graph = new GraphAM();
+        GraphAL graph = new GraphAL();
 
         for (int i = 0; i < 100; i++) {
             graph.addVertex();
         }
 
-        for (int i = 0; i < 20; i += 2) {
+        for (int i = 10; i < 20; i++) {
             graph.removeVertex(i);
         }
 
@@ -38,7 +38,7 @@ public class TestGraphAM {
 
     @Test
     void addEdge() {
-        Graph graph = new GraphAM();
+        GraphAL graph = new GraphAL();
 
         for (int i = 0; i < 10; i++) {
             graph.addVertex();
@@ -54,20 +54,39 @@ public class TestGraphAM {
 
     @Test
     void removeEdge() {
-        Graph graph = new GraphAM();
+        GraphAL graph = new GraphAL();
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 100; i++) {
             graph.addVertex();
         }
 
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < 20; i++) {
             graph.addEdge(0, i);
         }
 
-        for (int i = 2; i < 10; i += 2) {
+        for (int i = 1; i < 10; i++) {
             graph.removeEdge(0, i);
         }
 
-        assertEquals(5, graph.getEdgesCount());
+        assertEquals(10, graph.getEdgesCount());
+    }
+
+    @Test
+    void getAdjacent() {
+        GraphAL graph = new GraphAL();
+
+        for (int i = 0; i < 50; i++) {
+            graph.addVertex();
+        }
+
+        assertEquals(0, graph.getAdjacent(7).length);
+
+        for (int i = 10; i < 15; i++) {
+            graph.addEdge(1, i);
+        }
+
+        int[] adj = graph.getAdjacent(1);
+        int[] expected_adj = {10, 11, 12, 13, 14};
+        assertArrayEquals(expected_adj, adj);
     }
 }
