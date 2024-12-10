@@ -5,14 +5,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Test class which provides testing of Hands logic.
- * toString method in different situations.
- * Value of hand in different situations.
+ * Test class which provides testing of Hands logic. toString method in different situations. Value
+ * of hand in different situations.
  */
 public class HandTest {
 
     @Test
-    public void string() {
+    public void string() throws Exception {
         Hand hand = new Hand();
         hand.addCard(new Card(CardType.Queen, CardSuit.Spades));
         hand.addCard(new Card(3, CardSuit.Hearts));
@@ -24,7 +23,7 @@ public class HandTest {
     }
 
     @Test
-    public void stringWithHidden() {
+    public void stringWithHidden() throws Exception {
         Hand hand = new Hand();
         hand.addCard(new Card(CardType.Ace, CardSuit.Clubs));
         hand.addCard(new Card(7, CardSuit.Diamonds));
@@ -37,7 +36,7 @@ public class HandTest {
     }
 
     @Test
-    public void value() {
+    public void value() throws Exception {
         Hand hand = new Hand();
         hand.addCard(new Card(CardType.Ace, CardSuit.Hearts));
         hand.addCard(new Card(CardType.Ace, CardSuit.Diamonds));
@@ -47,7 +46,7 @@ public class HandTest {
     }
 
     @Test
-    public void valueWithHidden() {
+    public void valueWithHidden() throws Exception {
         Hand hand = new Hand();
         CardPool pool = new CardPool();
 

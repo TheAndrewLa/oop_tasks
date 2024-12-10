@@ -23,6 +23,7 @@ public class Hand {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append('[');
+
         stringBuilder.append(cardToString(cards.get(0)));
 
         for (int i = 1; i < cards.size(); i++) {
@@ -34,7 +35,6 @@ public class Hand {
 
         if (canCalculate()) {
             calculateValue();
-
             stringBuilder.append(" => ");
             stringBuilder.append(value);
         }
@@ -63,7 +63,6 @@ public class Hand {
         }
 
         int aces = 0;
-
         value = 0;
 
         for (Card i : cards) {
@@ -81,6 +80,9 @@ public class Hand {
                 case Ace:
                     aces += 1;
                     break;
+
+                default:
+                    throw new RuntimeException("Unknown enum value!");
             }
         }
 
@@ -102,14 +104,18 @@ public class Hand {
     }
 
     /**
-     * @return count of cards in hand
+     * Returns count of cards in hand.
+     *
+     * @return count of cards
      */
     public int getCardsCount() {
         return cards.size();
     }
 
     /**
-     * @return total value of cards in hand
+     * Returns value of cards in hand.
+     *
+     * @return value of cards
      */
     public int getValue() {
         if (value == null) {
@@ -147,6 +153,9 @@ public class Hand {
                 case Ace:
                     sb.append(valueOfAce);
                     break;
+
+                default:
+                    throw new RuntimeException("Unknown enum value!");
             }
 
             sb.append(')');
@@ -156,8 +165,10 @@ public class Hand {
     }
 
     /**
-     * Determine can value of cards in hand be calculated. <br> if there are hidden cards - no
-     * (false), otherwise - yes (true).
+     * Determine if value of cards in hand be calculated.
+     * if there are hidden cards - no (false), otherwise - yes (true).
+     *
+     * @return possibility of calculation value of hand
      */
     private boolean canCalculate() {
         if (cards.isEmpty()) {

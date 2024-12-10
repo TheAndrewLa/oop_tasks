@@ -2,8 +2,15 @@ package andrewla;
 
 public class Main {
 
+    /**
+     * Main method with game loop.
+     *
+     * @param args has to be empty
+     */
     public static void main(String[] args) {
         System.out.println("Добро пожаловать в Блэкджек!");
+
+        GameInput input = new GameInput();
 
         // Game loop
         boolean isRunning = true;
@@ -12,22 +19,23 @@ public class Main {
         int playersScore = 0;
 
         while (isRunning) {
-            Round round = new Round();
+            Round round = new Round(input);
             RoundResult result = round.play();
 
             switch (result) {
-                case DealerWins: {
+                case DealerWins:
                     dealersScore++;
-                }
-                break;
+                    break;
 
-                case PlayerWins: {
+                case PlayerWins:
                     playersScore++;
-                }
-                break;
+                    break;
 
                 case Tie:
                     break;
+
+                default:
+                    throw new RuntimeException("Unknown enum value");
             }
 
             System.out.println();
@@ -38,7 +46,7 @@ public class Main {
 
             System.out.println();
 
-            isRunning = InputHandler.askUser("Хотите еще раунд?");
+            isRunning = input.askUser("Хотите еще раунд?");
         }
 
         System.out.println("До свидания!");

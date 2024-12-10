@@ -7,8 +7,10 @@ public class Round {
 
     /**
      * Default constructor of round class.
+     *
+     * @param inputHandler a game input class
      */
-    Round() {
+    public Round(GameInput inputHandler) {
         Index++;
 
         System.out.printf("Раунд %d%n", Index);
@@ -16,6 +18,28 @@ public class Round {
         dealersHand = new Hand();
         playersHand = new Hand();
         pool = new CardPool();
+
+        handler = new GameInput();
+    }
+
+    /**
+     * Constructor of Round class with predefined card pool.
+     * Should be used for testing.
+     *
+     * @param inputHandler   a game input class
+     * @param predefinedPool a predefined card pool class
+     */
+    protected Round(GameInput inputHandler, CardPool predefinedPool) {
+        Index++;
+
+        System.out.printf("Раунд %d%n", Index);
+
+        dealersHand = new Hand();
+        playersHand = new Hand();
+
+        pool = predefinedPool;
+
+        handler = inputHandler;
     }
 
     /**
@@ -24,11 +48,7 @@ public class Round {
      * @return result of round
      */
     public RoundResult play() {
-        playersHand.addCard(pool.takeCard(false));
-        playersHand.addCard(pool.takeCard(false));
-
-        dealersHand.addCard(pool.takeCard(false));
-        dealersHand.addCard(pool.takeCard(true));
+        prepareRound();
 
         System.out.println("Дилер раздал карты");
         printHands();
@@ -72,14 +92,26 @@ public class Round {
     }
 
     /**
-     * Helping function which emulates players turn. <br> Used in game loop.
+     * Functions prepares round: gives two cards for player and dealer.
+     */
+    protected void prepareRound() {
+        playersHand.addCard(pool.takeCardOpen());
+        playersHand.addCard(pool.takeCardOpen());
+
+        dealersHand.addCard(pool.takeCardOpen());
+        dealersHand.addCard(pool.takeCardHide());
+    }
+
+    /**
+     * Helping function which emulates players turn.
+     * Used in game loop.
      */
     protected void playersTurn() {
         System.out.println("Ваш ход");
-        System.out.println("---------------");
+        System.out.println("-----------------");
 
-        while (playersHand.getValue() < PointsTarget && !pool.isEmpty()
-            && InputHandler.askUser("Хотите карту?")) {
+        while (playersHand.getValue() < PointsTarget && !pool.isEmpty() && handler.askUser(
+            "Хотите карту?")) {
             Card card = pool.takeCard(false);
 
             System.out.printf("Вы открыли карту «%s»%n", card.toString());
@@ -91,7 +123,8 @@ public class Round {
     }
 
     /**
-     * Helping function which emulates dealers loop. <br> Used in game loop.
+     * Helping function which emulates dealers loop.
+     * Used in game loop.
      */
     protected void dealersTurn() {
         System.out.println("Ход дилера");
@@ -127,9 +160,11 @@ public class Round {
     private final Hand playersHand;
 
     private final CardPool pool;
+    private final GameInput handler;
 
     private static final int PointsTarget = 21;
     private static final int DealerPointsLimit = 17;
 
     public static int Index = 0;
+
 }

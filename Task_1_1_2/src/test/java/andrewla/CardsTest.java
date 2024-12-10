@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Test class which provides testing of Cards logic.
@@ -17,7 +18,7 @@ public class CardsTest {
     public void constructor() {
         try {
             new Card(-100, CardSuit.Hearts);
-            assertTrue(false);
+            fail();
         } catch (AssertionError error) {
             assertTrue(true);
         }

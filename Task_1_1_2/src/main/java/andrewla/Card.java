@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Objects;
 
 /**
- * Class which store all info about cards. <br> This class can present all 54 cards.
+ * Class which store all info about cards.
+ * This class can present all 54 cards.
  */
 public class Card {
 
@@ -15,6 +16,8 @@ public class Card {
      * @param suit suit of card
      */
     public Card(int rank, CardSuit suit) {
+        assert rank >= 2 && rank <= 10;
+
         this.suit = suit;
         this.type = CardType.Number;
 
@@ -123,6 +126,7 @@ public class Card {
 
     /**
      * Helping function which creates map of number of cards
+     *
      * @return map of cards number
      */
     private static HashMap<Integer, String> createNumberMap() {
@@ -142,6 +146,7 @@ public class Card {
 
     /**
      * Helping function which creates map of type of cards
+     *
      * @return map of cards type
      */
     private static HashMap<CardType, String> createTypeMap() {
@@ -156,6 +161,7 @@ public class Card {
 
     /**
      * Helping function which creates map of suit of cards
+     *
      * @return map of cards suit
      */
     private static HashMap<CardSuit, String> createSuitMap() {
