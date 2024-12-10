@@ -154,12 +154,12 @@ public class UnorderedMap<K, V> implements Iterable<Pair<K, V>> {
             return false;
         }
 
-        UnorderedMap<?, ?> hash_map = (UnorderedMap<?, ?>) (obj);
+        UnorderedMap<?, ?> hashMap = (UnorderedMap<?, ?>) (obj);
 
         // Arrays.equals has to compare all elements of the arrays
         // So, bucket should have equals() method
 
-        return Arrays.equals(bucketsArray, hash_map.bucketsArray);
+        return Arrays.equals(bucketsArray, hashMap.bucketsArray);
     }
 
     /**

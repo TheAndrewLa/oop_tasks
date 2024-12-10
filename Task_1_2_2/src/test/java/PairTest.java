@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * This class is used to test helper Pair class
+ * This class is used to test helper Pair class.
  */
 public class PairTest {
 
@@ -22,11 +22,22 @@ public class PairTest {
     @Test
     void equalTest() {
         Pair<String, String> pair = new Pair<>("First", "Second");
-        Pair<String, String> another_pair = new Pair<>("First", "second");
+        Pair<String, String> anotherPair = new Pair<>("First", "second");
 
-        assertNotEquals(pair, another_pair);
+        assertNotEquals(pair, anotherPair);
 
         pair = new Pair<>("First", "second");
-        assertEquals(pair, another_pair);
+        assertEquals(pair, anotherPair);
+    }
+
+    @Test
+    void pickTest() {
+        Pair<String, String> pair1 = new Pair<>("Hello", "World");
+        assertEquals("Hello", pair1.first());
+        assertEquals("World", pair1.second());
+
+        Pair<Integer, Integer> pair2 = new Pair<>(1200, -2334);
+        assertEquals(1200, pair2.first());
+        assertEquals(-2334, pair2.second());
     }
 }

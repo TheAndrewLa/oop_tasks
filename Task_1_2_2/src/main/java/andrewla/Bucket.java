@@ -11,13 +11,13 @@ import java.util.LinkedList;
  */
 class Bucket<K, V> implements Iterable<Pair<K, V>> {
 
-    private final LinkedList<Pair<K, V>> kv_pairs;
+    private final LinkedList<Pair<K, V>> kvPairs;
 
     /**
      * A constructor of bucket, takes no arguments.
      */
     Bucket() {
-        kv_pairs = new LinkedList<>();
+        kvPairs = new LinkedList<>();
     }
 
     @Override
@@ -32,12 +32,12 @@ class Bucket<K, V> implements Iterable<Pair<K, V>> {
 
         Bucket<?, ?> bucket = (Bucket<?, ?>) obj;
 
-        return kv_pairs.equals(bucket.kv_pairs);
+        return kvPairs.equals(bucket.kvPairs);
     }
 
     @Override
     public int hashCode() {
-        return kv_pairs.hashCode();
+        return kvPairs.hashCode();
     }
 
     /**
@@ -52,7 +52,7 @@ class Bucket<K, V> implements Iterable<Pair<K, V>> {
             throw new IllegalArgumentException("Key already added");
         }
 
-        kv_pairs.add(new Pair<>(key, value));
+        kvPairs.add(new Pair<>(key, value));
     }
 
     /**
@@ -62,9 +62,9 @@ class Bucket<K, V> implements Iterable<Pair<K, V>> {
      * @param key a key to remove
      */
     public void removeEntry(K key) {
-        for (Pair<K, V> i : kv_pairs) {
+        for (Pair<K, V> i : kvPairs) {
             if (i.first() == key) {
-                kv_pairs.remove(i);
+                kvPairs.remove(i);
                 return;
             }
         }
@@ -80,7 +80,7 @@ class Bucket<K, V> implements Iterable<Pair<K, V>> {
      * @return a value of found KV pair
      */
     public V findEntry(K key) {
-        for (Pair<K, V> i : kv_pairs) {
+        for (Pair<K, V> i : kvPairs) {
             if (i.first() == key) {
                 return i.second();
             }
@@ -94,12 +94,12 @@ class Bucket<K, V> implements Iterable<Pair<K, V>> {
      * Throws illegal argument exception if there's no pair with given key.
      *
      * @param key a key of KV pair to update
-     * @param new_value a value found KV pair will be updated with
+     * @param newValue a value found KV pair will be updated with
      */
-    public void updateEntry(K key, V new_value) {
-        for (Pair<K, V> i : kv_pairs) {
+    public void updateEntry(K key, V newValue) {
+        for (Pair<K, V> i : kvPairs) {
             if (i.first() == key) {
-                i.update(key, new_value);
+                i.update(key, newValue);
                 return;
             }
         }
@@ -114,7 +114,7 @@ class Bucket<K, V> implements Iterable<Pair<K, V>> {
      * @return an indicating value
      */
     public boolean containsEntry(K key) {
-        for (Pair<K, V> i : kv_pairs) {
+        for (Pair<K, V> i : kvPairs) {
             if (i.first() == key) {
                 return true;
             }
@@ -129,11 +129,11 @@ class Bucket<K, V> implements Iterable<Pair<K, V>> {
      * @return a state of bucket
      */
     public boolean isEmpty() {
-        return kv_pairs.isEmpty();
+        return kvPairs.isEmpty();
     }
 
     @Override
     public Iterator<Pair<K, V>> iterator() {
-        return kv_pairs.iterator();
+        return kvPairs.iterator();
     }
 }

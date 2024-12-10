@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 /**
- * This class used for testing UnorderedMap class
+ * This class used for testing UnorderedMap class.
  */
 public class UnorderedMapTest {
 
@@ -63,12 +63,12 @@ public class UnorderedMapTest {
         map.insert("Two", 2);
         map.insert("Three", 3);
 
-        UnorderedMap<String, Integer> another_map = new UnorderedMap<>();
-        another_map.insert("One", 1);
-        another_map.insert("Two", 2);
-        another_map.insert("Three", 3);
+        UnorderedMap<String, Integer> anotherMap = new UnorderedMap<>();
+        anotherMap.insert("One", 1);
+        anotherMap.insert("Two", 2);
+        anotherMap.insert("Three", 3);
 
-        assertEquals(map, another_map);
+        assertEquals(map, anotherMap);
     }
 
     @Test
