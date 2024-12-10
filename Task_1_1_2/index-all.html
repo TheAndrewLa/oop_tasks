@@ -14,7 +14,7 @@
 <!--[if IE]>
 <script type="text/javascript" src="jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="jquery/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="jquery/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
 </head>
 <body>
@@ -104,9 +104,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><a href="andrewla/package-summary.html">andrewla</a> - package andrewla</dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="andrewla/InputHandler.html#askUser(java.lang.String)">askUser(String)</a></span> - Static method in class andrewla.<a href="andrewla/InputHandler.html" title="class in andrewla">InputHandler</a></dt>
+<dt><span class="memberNameLink"><a href="andrewla/GameInput.html#askUser(java.lang.String)">askUser(String)</a></span> - Method in class andrewla.<a href="andrewla/GameInput.html" title="class in andrewla">GameInput</a></dt>
 <dd>
-<div class="block">Function which prints your message and takes user's input.</div>
+<div class="block">Function which prints your message and takes input.</div>
 </dd>
 </dl>
 <a id="I:C">
@@ -137,6 +137,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="andrewla/CardPool.html#%3Cinit%3E()">CardPool()</a></span> - Constructor for class andrewla.<a href="andrewla/CardPool.html" title="class in andrewla">CardPool</a></dt>
 <dd>
 <div class="block">Default constructor for CardPool.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="andrewla/CardPool.html#%3Cinit%3E(andrewla.Card%5B%5D)">CardPool(Card[])</a></span> - Constructor for class andrewla.<a href="andrewla/CardPool.html" title="class in andrewla">CardPool</a></dt>
+<dd>
+<div class="block">Constructor of CardPool with predefined cards.</div>
 </dd>
 <dt><a href="andrewla/CardSuit.html" title="enum in andrewla"><span class="typeNameLink">CardSuit</span></a> - Enum in <a href="andrewla/package-summary.html">andrewla</a></dt>
 <dd>
@@ -176,10 +180,24 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">G</h2>
 <dl>
+<dt><a href="andrewla/GameInput.html" title="class in andrewla"><span class="typeNameLink">GameInput</span></a> - Class in <a href="andrewla/package-summary.html">andrewla</a></dt>
+<dd>
+<div class="block">Class which provides input functions.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="andrewla/GameInput.html#%3Cinit%3E()">GameInput()</a></span> - Constructor for class andrewla.<a href="andrewla/GameInput.html" title="class in andrewla">GameInput</a></dt>
+<dd>
+<div class="block">Initializes standard user input.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="andrewla/GameInput.html#%3Cinit%3E(java.lang.String)">GameInput(String)</a></span> - Constructor for class andrewla.<a href="andrewla/GameInput.html" title="class in andrewla">GameInput</a></dt>
+<dd>
+<div class="block">Initialized input with predefined answers.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="andrewla/Hand.html#getCard(int)">getCard(int)</a></span> - Method in class andrewla.<a href="andrewla/Hand.html" title="class in andrewla">Hand</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="andrewla/Hand.html#getCardsCount()">getCardsCount()</a></span> - Method in class andrewla.<a href="andrewla/Hand.html" title="class in andrewla">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns count of cards in hand.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="andrewla/Card.html#getRank()">getRank()</a></span> - Method in class andrewla.<a href="andrewla/Card.html" title="class in andrewla">Card</a></dt>
 <dd>
 <div class="block">Returns rank of cars.</div>
@@ -189,7 +207,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Returns a type of card</div>
 </dd>
 <dt><span class="memberNameLink"><a href="andrewla/Hand.html#getValue()">getValue()</a></span> - Method in class andrewla.<a href="andrewla/Hand.html" title="class in andrewla">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns value of cards in hand.</div>
+</dd>
 </dl>
 <a id="I:H">
 <!--   -->
@@ -215,12 +235,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">I</h2>
 <dl>
 <dt><span class="memberNameLink"><a href="andrewla/Round.html#Index">Index</a></span> - Static variable in class andrewla.<a href="andrewla/Round.html" title="class in andrewla">Round</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="andrewla/InputHandler.html" title="class in andrewla"><span class="typeNameLink">InputHandler</span></a> - Class in <a href="andrewla/package-summary.html">andrewla</a></dt>
-<dd>
-<div class="block">Class which provides IO stuff via static functions.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="andrewla/InputHandler.html#%3Cinit%3E()">InputHandler()</a></span> - Constructor for class andrewla.<a href="andrewla/InputHandler.html" title="class in andrewla">InputHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="andrewla/CardPool.html#isEmpty()">isEmpty()</a></span> - Method in class andrewla.<a href="andrewla/CardPool.html" title="class in andrewla">CardPool</a></dt>
 <dd>&nbsp;</dd>
@@ -251,7 +265,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">M</h2>
 <dl>
 <dt><span class="memberNameLink"><a href="andrewla/Main.html#main(java.lang.String%5B%5D)">main(String[])</a></span> - Static method in class andrewla.<a href="andrewla/Main.html" title="class in andrewla">Main</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Main method with game loop.</div>
+</dd>
 <dt><a href="andrewla/Main.html" title="class in andrewla"><span class="typeNameLink">Main</span></a> - Class in <a href="andrewla/package-summary.html">andrewla</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="andrewla/Main.html#%3Cinit%3E()">Main()</a></span> - Constructor for class andrewla.<a href="andrewla/Main.html" title="class in andrewla">Main</a></dt>
@@ -280,6 +296,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="andrewla/RoundResult.html#PlayerWins">PlayerWins</a></span> - andrewla.<a href="andrewla/RoundResult.html" title="enum in andrewla">RoundResult</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="andrewla/Round.html#prepareRound()">prepareRound()</a></span> - Method in class andrewla.<a href="andrewla/Round.html" title="class in andrewla">Round</a></dt>
+<dd>
+<div class="block">Functions prepares round: gives two cards for player and dealer.</div>
+</dd>
 </dl>
 <a id="I:Q">
 <!--   -->
@@ -298,6 +318,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Class which provide function for round stage for game loop.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="andrewla/Round.html#%3Cinit%3E(andrewla.GameInput)">Round(GameInput)</a></span> - Constructor for class andrewla.<a href="andrewla/Round.html" title="class in andrewla">Round</a></dt>
+<dd>
+<div class="block">Default constructor of round class.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="andrewla/Round.html#%3Cinit%3E(andrewla.GameInput,andrewla.CardPool)">Round(GameInput, CardPool)</a></span> - Constructor for class andrewla.<a href="andrewla/Round.html" title="class in andrewla">Round</a></dt>
+<dd>
+<div class="block">Constructor of Round class with predefined card pool.</div>
+</dd>
 <dt><a href="andrewla/RoundResult.html" title="enum in andrewla"><span class="typeNameLink">RoundResult</span></a> - Enum in <a href="andrewla/package-summary.html">andrewla</a></dt>
 <dd>
 <div class="block">An enum with results of round.</div>
@@ -314,7 +342,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="andrewla/CardPool.html#size()">size()</a></span> - Method in class andrewla.<a href="andrewla/CardPool.html" title="class in andrewla">CardPool</a></dt>
 <dd>
-<div class="block">USED FOR TESTING.</div>
+<div class="block">Number of cards in pool.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="andrewla/CardSuit.html#Spades">Spades</a></span> - andrewla.<a href="andrewla/CardSuit.html" title="enum in andrewla">CardSuit</a></dt>
 <dd>&nbsp;</dd>
@@ -325,6 +353,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">T</h2>
 <dl>
 <dt><span class="memberNameLink"><a href="andrewla/CardPool.html#takeCard(boolean)">takeCard(boolean)</a></span> - Method in class andrewla.<a href="andrewla/CardPool.html" title="class in andrewla">CardPool</a></dt>
+<dd>
+<div class="block">Function takes card.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="andrewla/CardPool.html#takeCardHide()">takeCardHide()</a></span> - Method in class andrewla.<a href="andrewla/CardPool.html" title="class in andrewla">CardPool</a></dt>
+<dd>
+<div class="block">Function takes card.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="andrewla/CardPool.html#takeCardOpen()">takeCardOpen()</a></span> - Method in class andrewla.<a href="andrewla/CardPool.html" title="class in andrewla">CardPool</a></dt>
 <dd>
 <div class="block">Function takes card.</div>
 </dd>

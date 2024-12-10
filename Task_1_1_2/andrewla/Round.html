@@ -14,7 +14,7 @@
 <!--[if IE]>
 <script type="text/javascript" src="../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="../jquery/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../jquery/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../jquery/jquery-ui.min.js"></script>
 </head>
 <body>
@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -89,13 +89,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -162,6 +162,39 @@ extends java.lang.Object</pre>
 </li>
 </ul>
 </section>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<section>
+<ul class="blockList">
+<li class="blockList"><a id="constructor.summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colSecond" scope="col">Constructor</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(andrewla.GameInput)">Round</a></span>&#8203;(<a href="GameInput.html" title="class in andrewla">GameInput</a>&nbsp;inputHandler)</code></th>
+<td class="colLast">
+<div class="block">Default constructor of round class.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected </code></td>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(andrewla.GameInput,andrewla.CardPool)">Round</a></span>&#8203;(<a href="GameInput.html" title="class in andrewla">GameInput</a>&nbsp;inputHandler,
+     <a href="CardPool.html" title="class in andrewla">CardPool</a>&nbsp;predefinedPool)</code></th>
+<td class="colLast">
+<div class="block">Constructor of Round class with predefined card pool.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</section>
 <!-- ========== METHOD SUMMARY =========== -->
 <section>
 <ul class="blockList">
@@ -195,6 +228,13 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#playersTurn()">playersTurn</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Helping function which emulates players turn.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#prepareRound()">prepareRound</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Functions prepares round: gives two cards for player and dealer.</div>
 </td>
 </tr>
 </table>
@@ -233,6 +273,47 @@ extends java.lang.Object</pre>
 </li>
 </ul>
 </section>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<section>
+<ul class="blockList">
+<li class="blockList"><a id="constructor.detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a id="&lt;init&gt;(andrewla.GameInput)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>Round</h4>
+<pre>public&nbsp;Round&#8203;(<a href="GameInput.html" title="class in andrewla">GameInput</a>&nbsp;inputHandler)</pre>
+<div class="block">Default constructor of round class.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inputHandler</code> - a game input class</dd>
+</dl>
+</li>
+</ul>
+<a id="&lt;init&gt;(andrewla.GameInput,andrewla.CardPool)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Round</h4>
+<pre>protected&nbsp;Round&#8203;(<a href="GameInput.html" title="class in andrewla">GameInput</a>&nbsp;inputHandler,
+                <a href="CardPool.html" title="class in andrewla">CardPool</a>&nbsp;predefinedPool)</pre>
+<div class="block">Constructor of Round class with predefined card pool.
+ Should be used for testing.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inputHandler</code> - a game input class</dd>
+<dd><code>predefinedPool</code> - a predefined card pool class</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</section>
 <!-- ============ METHOD DETAIL ========== -->
 <section>
 <ul class="blockList">
@@ -254,6 +335,16 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
+<a id="prepareRound()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>prepareRound</h4>
+<pre class="methodSignature">protected&nbsp;void&nbsp;prepareRound()</pre>
+<div class="block">Functions prepares round: gives two cards for player and dealer.</div>
+</li>
+</ul>
 <a id="playersTurn()">
 <!--   -->
 </a>
@@ -261,7 +352,8 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>playersTurn</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;playersTurn()</pre>
-<div class="block">Helping function which emulates players turn. <br> Used in game loop.</div>
+<div class="block">Helping function which emulates players turn.
+ Used in game loop.</div>
 </li>
 </ul>
 <a id="dealersTurn()">
@@ -271,7 +363,8 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>dealersTurn</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;dealersTurn()</pre>
-<div class="block">Helping function which emulates dealers loop. <br> Used in game loop.</div>
+<div class="block">Helping function which emulates dealers loop.
+ Used in game loop.</div>
 </li>
 </ul>
 </li>
@@ -326,13 +419,13 @@ extends java.lang.Object</pre>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
