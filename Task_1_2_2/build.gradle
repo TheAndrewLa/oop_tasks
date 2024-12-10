@@ -3,7 +3,7 @@ plugins {
     id 'jacoco'
 }
 
-group = 'andrew_la'
+group = 'andrewla'
 version = '1.0-SNAPSHOT'
 
 repositories {
