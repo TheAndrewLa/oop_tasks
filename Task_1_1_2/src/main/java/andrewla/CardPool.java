@@ -74,16 +74,18 @@ public class CardPool {
     }
 
     /**
-     * Number of cards in pool.
+     * Returns info about CardPool fullness.
      *
-     * @return count of cards
+     * @return a count of cards
      */
     public int size() {
         return cards.size();
     }
 
     /**
-     * @return boolean that indicates pool is empty or not
+     * Returns info about CardPool fullness.
+     *
+     * @return a boolean that indicates pool is empty or not
      */
     public boolean isEmpty() {
         return cards.isEmpty();

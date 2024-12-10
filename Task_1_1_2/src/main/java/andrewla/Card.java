@@ -74,7 +74,7 @@ public class Card {
     }
 
     /**
-     * Returns a type of card
+     * Returns a type of card.
      *
      * @return type of card
      */
@@ -125,7 +125,7 @@ public class Card {
     private static final HashMap<CardSuit, String> suitNames = createSuitMap();
 
     /**
-     * Helping function which creates map of number of cards
+     * Helping function which creates map of number of cards.
      *
      * @return map of cards number
      */
@@ -145,7 +145,7 @@ public class Card {
     }
 
     /**
-     * Helping function which creates map of type of cards
+     * Helping function which creates map of type of cards.
      *
      * @return map of cards type
      */
@@ -160,7 +160,7 @@ public class Card {
     }
 
     /**
-     * Helping function which creates map of suit of cards
+     * Helping function which creates map of suit of cards.
      *
      * @return map of cards suit
      */

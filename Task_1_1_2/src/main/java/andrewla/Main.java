@@ -1,5 +1,8 @@
 package andrewla;
 
+/**
+ * Main class contains only main method with game loop.
+ */
 public class Main {
 
     /**

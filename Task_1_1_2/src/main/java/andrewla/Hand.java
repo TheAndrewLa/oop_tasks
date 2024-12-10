@@ -96,6 +96,8 @@ public class Hand {
     }
 
     /**
+     * Returns card from pool by index.
+     *
      * @param index index of card
      * @return card in hand with given index
      */
