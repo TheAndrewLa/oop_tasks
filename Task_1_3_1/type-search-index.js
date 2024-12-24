@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"andrewla","l":"BufferedFileReader"},{"p":"andrewla","l":"SubstringFind"}];updateSearchResults();
